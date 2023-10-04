@@ -11,10 +11,19 @@ bucket_finder.rb : used to discover aws buckets
   - --download: downloads the contents of the bucket if it publicaly accessible. (Warning, never know whats in the bucket)
 
   ## GOOGLE Discovery ##
-gcpbucketbrute.py: used to find google buckets
+gcpbucketbrute.py: used to find google buckets         gcp - google compute
   'gcpbucketbrute.py -u -k falimentis'
 
 gsutil: linux version of gcpbucketbrute.py
   'gsutil ls gs://falsimentis-dev'
     - gsutil has linux capabilities within it. Kind of how gobuster lists out files and directories
 
+   ## AZURE ##
+basicblobfinder.py: custom tool made by sans to search for azure blobs
+   'basicblobfinder.py wordlist'
+
+   ## NOTES ##
+FxCodeSheel.jsp is a backdoor on vuln buckets. Uses .jsp file so that the web server will pull it from the bucket.
+   - type codes
+      1: is a windows device
+      2: is a linux device
