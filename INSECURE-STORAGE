@@ -1,1 +1,20 @@
+   ## Default Storage Links ##
+AWS: https://s3.amazonaws.com/<BUCKETNAME>
+GOOGLE: https://www.googleapis.com/storage/v1/b/<BUCKETNAME>
+AZURE: https://<ACCOUNTNAME>.blob.core.windows.net/<CONTAINERNAME>
+  - Azure calls buckets blobs
+
+    ## AWS Discovery ##
+bucket_finder.rb : used to discover aws buckets
+  'bucket_finder.rb words --download'
+  - words: file full of key words to randomly discover buckets
+  - --download: downloads the contents of the bucket if it publicaly accessible. (Warning, never know whats in the bucket)
+
+  ## GOOGLE Discovery ##
+gcpbucketbrute.py: used to find google buckets
+  'gcpbucketbrute.py -u -k falimentis'
+
+gsutil: linux version of gcpbucketbrute.py
+  'gsutil ls gs://falsimentis-dev'
+    - gsutil has linux capabilities within it. Kind of how gobuster lists out files and directories
 
